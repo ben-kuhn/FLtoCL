@@ -13,10 +13,9 @@ cl_path = /index.php/api/qso
 # forget to add a description so you remember what it is for
 # later.
 cl_apikey =  
-# station_profile_id - This can be found when editing a
-# station profile.  It is a number and displayed in the
-# URL string
-cl_station_profile_id = 
+# station_profile_id - This can be found on the "Station
+# Location" page.  The default is 1.
+cl_station_profile_id = 1 
 
 [HAMQth]
 # hamqth_username - Your HamQTH username.  Usually your call.
