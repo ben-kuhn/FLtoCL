@@ -1,0 +1,34 @@
+[Cloudlog]
+# cl_host - The URL of your Cloudlog instance
+cl_host = 
+# path - The API path.  Default is /index.php/api/qso.  If your
+# Cloudlog instance is in a directory such as /cloudlog adjust
+# as needed.
+cl_path = /index.php/api/qso
+# apikey - Your API Key for FLtoCL.  You should generate a
+# unique API key for each application used with CloudLog.
+# You can generate an API key by clicking on your callsign
+# in the upper right of the application and clicking API Keys.
+# the key for FLtoCL needs to be a read-write key.  Don't
+# forget to add a description so you remember what it is for
+# later.
+cl_apikey =  
+# station_profile_id - This can be found when editing a
+# station profile.  It is a number and displayed in the
+# URL string
+cl_station_profile_id = 
+
+[HAMQth]
+# hamqth_username - Your HamQTH username.  Usually your call.
+hamqth_username = 
+# hamqth_password - Your HamQTH account password.
+hamqth_password = 
+
+[FLDigi]
+# fldigi_hostname - The IP or hostname of the computer running
+# fldigi.  If you are running it on the same computer as this
+# program you can leave the default of 127.0.0.1
+fldigi_xmlrpc_hostname = 127.0.0.1
+# fldigi_xmlrps_port - The port used by FLDigi's XMLRPC Interface.
+# Default is 7362
+fldigi_xmlrpc_port = 7362
