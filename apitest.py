@@ -47,14 +47,14 @@ results = qth.lookupCallsign(argv[1], getBio=False, getActivity=False)
 #for key in results:
 #    print("%s : %s" % (key, results[key]))
 
-print(results["nick"])
+#print(results["nick"])
 
 band = "40M"
 mode = "FT8"
 freq = "14.074000"
 qso_date = "20220415"
 time_on = "170000"
-time_of = "170100"
+time_off = "170100"
 rst_rcvd = "-10"
 rst_sent = "+11"
 qsl_rcvd = "N"
@@ -65,8 +65,19 @@ name = results["nick"]
 # check if it exists in the record first I suppose
 cnty = results["us_county"]
 state = results["us_state"]
+
 cont = results["continent"]
+# Again, check if state exists
+qth = results["adr_city"] + ", " + state
+
+cladif = "<call:" + str(len(argv[1])) + ">" + argv[1] + "<band:" + str(len(band)) + ">" + band + "<mode:" + str(len(mode)) + ">" + mode + "<freq:" + str(len(freq)) + ">" + freq + "<qso_date:" + str(len(qso_date)) + ">" + str(qso_date) + "<time_on:" + str(len(time_on)) + ">" + str(time_on) + "<time_off:" + str(len(time_off)) + ">" + str(time_off) + "<rst_rcvd:" + str(len(rst_rcvd)) + ">" + str(rst_rcvd) + "<qsl_rcvd:" + str(len(qsl_rcvd)) + ">" + qsl_rcvd +"<qsl_sent:" + str(len(qsl_sent)) + ">" + qsl_sent + "<country:" + str(len(country)) + ">" + country + "<gridsquare:" + str(len(gridsquare)) + ">" + gridsquare + "<name:" + str(len(name)) + ">" + name + "<cnty:" + str(len(cnty)) + ">" + cnty + "<state:" + str(len(state)) + ">" + state + "<cont:" + str(len(cont)) + ">" + cont + "<qth:" + str(len(qth)) + ">" + qth + "<eor>"
 
 
 toCL = {
+    "key": "YOUR_API_KEY",
+    "station_profile_id": "Station Profile ID Number",
+    "type": "adif",
+    "string": cladif
+}
 
+print(toCL)
